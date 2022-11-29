@@ -24,7 +24,7 @@ public class Swimmer
         this.exerciser = exerciser;
     }
 
-    public String toString()
+    //public String toString()
     {
         String text = "";
         text += "status" + (this.status ? "status" : "active");

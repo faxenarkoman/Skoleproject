@@ -7,12 +7,13 @@ public class Main {
         scan = new Scanner(System.in);
 
         boolean goback = true;
-        boolean chairmanMenu = true;
         while (goback) {
-            welcome();
-            if (input == 1) {
+            mainmenu();
+            if (input == 1)
+            {
+                boolean chairmanMenu = true;
                 while(chairmanMenu) {
-                    System.out.println("Welcome Chairman, how do you want to proceed?");
+                    System.out.println("mainmenu Chairman, how do you want to proceed?");
                     System.out.println("1: Log new member");
                     System.out.println("2: Delete current member");
                     System.out.println("3: See all members");
@@ -49,7 +50,7 @@ public class Main {
            if (input == 2) {
                boolean trainerMenu = true;
                while (trainerMenu) {
-                   System.out.println("Welcome Trainer, how do you want to Proceed");
+                   System.out.println("mainmenu Trainer, how do you want to Proceed");
                    System.out.println("1: Calendar");
                    System.out.println("2: Log swimmers best time");
                    System.out.println("3: Top 5 list");
@@ -103,9 +104,9 @@ public class Main {
 
         }
     }
-        private static void welcome()
+        private static void mainmenu()
         {
-            System.out.println("Welcome to Delfinen Choose your account");
+            System.out.println("mainmenu to Delfinen Choose your account");
             System.out.println("(1. ---Chairman---)");
             System.out.println("(2. ---Trainer---)");
             System.out.println("(3. ---Cashier---)");
