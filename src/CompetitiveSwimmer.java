@@ -1,4 +1,4 @@
-public class CompetitiveSwimmer
+public class CompetitiveSwimmer extends Swimmer
 {
     double bestSwimmingResults;
     int date;
