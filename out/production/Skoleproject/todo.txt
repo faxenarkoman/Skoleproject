@@ -2,3 +2,5 @@
 - Medlemmers gæld
 - Dicipliner træneren er tilknyttet
 - top 5 bedste tider
+- Liste over svømmer in file
+- Integrer aktivt eller passivt medlemskab, junior eller senior svømmer, motionist eller konkurrencesvømmer
