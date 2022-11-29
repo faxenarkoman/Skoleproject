@@ -8,7 +8,9 @@ public class Main {
         System.out.println("(3. ---Cashier---)");
         System.out.println("(4. ---Admin---)");
 
-        Scanner sc=new Scanner(System.in);
+        Scanner scan=new Scanner(System.in);
+        int input = 0;
+        input=scan.nextInt();
 
 
     }
