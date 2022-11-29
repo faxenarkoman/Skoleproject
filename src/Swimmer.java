@@ -4,6 +4,7 @@ public class Swimmer
     int age;
     String name;
     String formOfActivity;
+    
 
     public Swimmer(int membership, int age, String name, String formOfActivity)
     {
