@@ -34,13 +34,15 @@ public class Main {
 
                 if (input == 4) {
                     input = 0;
-                    goback = false;
+                    //goback = false;
                 }
 
 
             }
-            while (goback) {
-                if (input == 2) {
+
+           if (input == 2) {
+               boolean trainerMenu = true;
+               while (trainerMenu) {
                     System.out.println("Welcome Trainer, how do you want to Proceed");
                     System.out.println("1: Calendar");
                     System.out.println("2: Log swimmers best time");
@@ -64,16 +66,14 @@ public class Main {
 
                     if (input == 4) {
                         input = 0;
-                        goback = false;
+                        trainerMenu = false;
                     }
 
                     if (input > 4) {
                         input = 0;
-                        System.out.println("error");
+                        System.out.println("Du skal vælge menupunkte 1 - 4");
                     }
-
-
-                }
+               }
                 if (input == 3) {
 
 
