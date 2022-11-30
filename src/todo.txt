@@ -1,5 +1,6 @@
 (Formand)
 - Liste over alle medlemmer
+- Tilmeld flere medlemmer
 (Kassen)
 - Medlemmers gæld
 (Træner)
