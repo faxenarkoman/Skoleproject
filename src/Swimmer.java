@@ -1,8 +1,8 @@
-
+import java.util.ArrayList;
 
 public class Swimmer
 {
-    int membership;
+    int contingent;
     int age;
     String name;
     String formOfActivity;
@@ -15,11 +15,11 @@ public class Swimmer
     boolean traningLevel;
 
 
-    public Swimmer(int membership, int age, String name, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
+    public Swimmer(int contingent, int age, String name, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
     {
         System.out.println("Give information of Swimmers: int membership, int age, String name, String formOfActivity, boolean status = true, boolean junior = true, boolean exerciser = true");
         //scanner
-        this.membership = membership;
+        this.contingent = contingent;
         this.age  = age;
         this.name = name;
         this.formOfActivity = formOfActivity;
@@ -27,6 +27,7 @@ public class Swimmer
         this.ageGroup = ageGroup;
         this.traningLevel = trainingLevel;
     }
+
 
 
     public String swimmerInfo()
