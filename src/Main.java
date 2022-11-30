@@ -22,7 +22,7 @@ public class Main {
             {
                 boolean chairmanMenu = true;
                 while(chairmanMenu) {
-                    System.out.println("mainmenu Chairman, how do you want to proceed?");
+                    System.out.println("Hello Chairman, how do you want to proceed?");
                     System.out.println("1: Log new member");
                     System.out.println("2: Delete current member");
                     System.out.println("3: See all members");
@@ -60,14 +60,14 @@ public class Main {
                boolean trainerMenu = true;
                while (trainerMenu) {
                    System.out.println("Trainer, how do you want to Proceed");
-                   System.out.println("1: Calendar");
-                   System.out.println("2: Log swimmers best time");
-                   System.out.println("3: Top 5 list");
-                   System.out.println("4: Back to menu");
+                   System.out.println("1: Log swimmers best time");
+                   System.out.println("2: Top 5 list");
+                   System.out.println("3: Back to menu");
                    input = scan.nextInt();
+
                    if (input == 1) {
                        input = 0;
-
+                       Trainer.trainer();
                    }
 
                    if (input == 2) {
@@ -77,15 +77,10 @@ public class Main {
 
                    if (input == 3) {
                        input = 0;
-
-                   }
-
-                   if (input == 4) {
-                       input = 0;
                        trainerMenu = false;
                    }
 
-                   if (input > 4) {
+                   if (input > 3 {
                        input = 0;
                        System.out.println("You need to choose a menu-point from 1 - 4");
                        System.out.println();
