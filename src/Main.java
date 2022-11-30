@@ -50,7 +50,7 @@ public class Main {
            if (input == 2) {
                boolean trainerMenu = true;
                while (trainerMenu) {
-                   System.out.println("mainmenu Trainer, how do you want to Proceed");
+                   System.out.println("Trainer, how do you want to Proceed");
                    System.out.println("1: Calendar");
                    System.out.println("2: Log swimmers best time");
                    System.out.println("3: Top 5 list");
@@ -83,16 +83,94 @@ public class Main {
                    }
                }
            }
-           if (input == 3) {
+           if (input == 3)
+           {
+                boolean cashiermenu=true;
+                while(cashiermenu)
+                {
+                    System.out.println("Welcome Cashier");
+                    System.out.println("1: Show arrears");
+                    System.out.println("2: Back to main manu");
+                    input = scan.nextInt();
 
-
+                    if (input == 1)
+                    {
+                        //method here
+                    }
+                    if (input == 2)
+                    {
+                        input = 0;
+                        cashiermenu = false;
+                    }
+                    else if (input > 2)
+                    {
+                         input = 0;
+                         System.out.println("You need to choose a menu-point from 1 - 4");
+                    }    System.out.println();
                 }
-           if (input == 4) {
 
 
-                }
+           }
+           if (input == 4)
+           {
+               boolean adminmenu = true;
+               while (adminmenu) {
 
 
+                   System.out.println("Whats your command, commander");
+                   System.out.println("1: Log new member");
+                   System.out.println("2: Delete current member");
+                   System.out.println("3: See all members");
+                   System.out.println("4: Trainers Calendar");
+                   System.out.println("5: Log swimmers best time");
+                   System.out.println("6: Top 5 list");
+                   System.out.println("7: Back to menu");
+                   input = scan.nextInt();
+
+                   if (input == 1)
+                   {
+                      input = 0;
+                   }
+
+                   if (input == 2)
+                   {
+                      input = 0;
+                   }
+
+                   if (input == 3)
+                   {
+                      input = 0;
+                   }
+
+                   if (input == 4)
+                   {
+                        input = 0;
+                   }
+
+                   if (input == 5)
+                   {
+                      input = 0;
+                   }
+
+                   if (input == 6)
+                   {
+                      input = 0;
+                   }
+
+                   if (input == 7)
+                   {
+                       input = 0;
+                       adminmenu = false;
+                   }
+
+                   if (input > 7)
+                   {
+                      System.out.println("You need to choose a menu-point from 1 - 7");
+                      System.out.println();
+                   }
+               }
+
+           }
             if (input == 5)
             {
                 System.out.println("Have nice day!");
