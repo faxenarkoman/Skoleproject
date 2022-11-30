@@ -25,7 +25,7 @@ public class Swimmer
         this.formOfActivity = formOfActivity;
         this.status = status;
         this.ageGroup = ageGroup;
-        this.exerciser = exerciser;
+        this.traningLevel = trainingLevel;
     }
 
 
@@ -50,7 +50,7 @@ public class Swimmer
             return "im a exerciser";
 
         if (traningLevel = true)
-            return ("im a competitive swimmer")
+            return ("im a competitive swimmer");
 
         return text + status + ageGroup + traningLevel;
     }
