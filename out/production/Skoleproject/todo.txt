@@ -8,7 +8,7 @@
 - top 5 bedste tider
 - Log ny personlig bedste tid
 
-- Liste over svømmere i en fil
+- Liste over svømmere
 - //Integrer aktivt eller passivt medlemskab, junior eller senior svømmer, motionist eller konkurrencesvømmer
 - kalender til træner.
 - top 5 liste

@@ -9,7 +9,7 @@ public class Main {
 
         ArrayList<Swimmer> swimmerList = new ArrayList<>();
         swimmerList.add(new Swimmer(1000, 16, "Patric", "breaststroke", true, false, true));
-        swimmerList.add(new CompetitiveSwimmer(1000, 18, "Louise", "butterfly", true, true, true, 55.25, 22 ));
+        swimmerList.add(new Swimmer(1000, 18, "Louise", "butterfly", true, true, true));
 
         scan = new Scanner(System.in);
 
