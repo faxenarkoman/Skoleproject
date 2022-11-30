@@ -63,7 +63,7 @@ public class Main {
 
                    if (input == 2) {
                        input = 0;
-
+                       Trainer.trainer();
                    }
 
                    if (input == 3) {
