@@ -1,3 +1,5 @@
+
+
 public class Swimmer
 {
     int membership;
@@ -27,8 +29,12 @@ public class Swimmer
     //public String toString()
     {
         String text = "";
-        text += "status" + (this.status ? "status" : "active");
         
+        if (status = false)
+            return "im a Exerciser";
+
+        if (status = true)
+            return "im a Competetive swimmer";
     }
 
 }
