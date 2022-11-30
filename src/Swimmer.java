@@ -9,7 +9,8 @@ public class Swimmer
 
     // find en metode til at implementer til hvert objekt
     boolean status;
-    boolean junior = true, senior = false;
+
+    boolean ageGroup;
     boolean exerciser = true, competitive = false;
 
 
@@ -26,15 +27,23 @@ public class Swimmer
         this.exerciser = exerciser;
     }
 
-    //public String toString()
+
+    public String swimmerInfo()
     {
         String text = "";
         
         if (status = false)
-            return "im a Exerciser";
+            return "im a passive swimmer";
 
         if (status = true)
-            return "im a Competetive swimmer";
+                return "im a aktive swimmer";
+
+        if (ageGroup = false)
+            return "im junior";
+        if (ageGroup = true)
+                return "im a senior";
+
+        return text + status + ageGroup;
     }
 
 }

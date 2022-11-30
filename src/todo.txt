@@ -10,3 +10,8 @@
 
 - Liste over svømmere i en fil
 - Integrer aktivt eller passivt medlemskab, junior eller senior svømmer, motionist eller konkurrencesvømmer
+- kalender til træner.
+- top 5 liste
+- medlemmer se, kontigent, tilmelde
+
+-
