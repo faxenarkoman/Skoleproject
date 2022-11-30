@@ -11,10 +11,11 @@ public class Swimmer
     boolean status;
 
     boolean ageGroup;
-    boolean exerciser = true, competitive = false;
+
+    boolean traningLevel;
 
 
-    public Swimmer(int membership, int age, String name, String formOfActivity, boolean status, boolean junior, boolean exerciser)
+    public Swimmer(int membership, int age, String name, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
     {
         System.out.println("Give information of Swimmers: int membership, int age, String name, String formOfActivity, boolean status = true, boolean junior = true, boolean exerciser = true");
         //scanner
@@ -23,7 +24,7 @@ public class Swimmer
         this.name = name;
         this.formOfActivity = formOfActivity;
         this.status = status;
-        this.junior = junior;
+        this.ageGroup = ageGroup;
         this.exerciser = exerciser;
     }
 
@@ -40,10 +41,18 @@ public class Swimmer
 
         if (ageGroup = false)
             return "im junior";
-        if (ageGroup = true)
-                return "im a senior";
 
-        return text + status + ageGroup;
+        if (ageGroup = true)
+
+            return "im a senior";
+
+        if (traningLevel = false)
+            return "im a exerciser";
+
+        if (traningLevel = true)
+            return ("im a competitive swimmer")
+
+        return text + status + ageGroup + traningLevel;
     }
 
 }
