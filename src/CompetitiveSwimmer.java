@@ -3,13 +3,11 @@ public class CompetitiveSwimmer extends Swimmer
     double bestSwimmingResults;
     int date;
 
-    public CompetitiveSwimmer(int membership
 
-
-, int age, String name, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel, double bestSwimmingResults, int date)
+      public CompetitiveSwimmer(int contingent, int age, String name, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel, double bestSwimmingResults, int date)
     {
         // Find en måde at få scanner til at oprette en instans af objekt
-        super(contigent, age, name, formOfActivity, status, ageGroup, trainingLevel);
+        super(contingent, age, name, formOfActivity, status, ageGroup, trainingLevel);
             this.bestSwimmingResults = bestSwimmingResults;
             this.date = date;
     }

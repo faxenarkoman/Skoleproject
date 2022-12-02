@@ -13,5 +13,7 @@
 - kalender til træner.
 - top 5 liste
 - medlemmer se, kontigent, tilmelde
-
+- local date time + top 5 i competitiveswimmer
+- ArrayList to File
+- print arraylist
 -
