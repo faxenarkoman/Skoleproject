@@ -8,10 +8,10 @@ public class Main {
 
 
         ArrayList<Swimmer> swimmerList = new ArrayList<>();
-        swimmerList.add(new Swimmer(1000, 16, "Patrik", "breaststroke", true, false, true));
+        swimmerList.add(new Swimmer(1000, 16, "Patric", "breaststroke", true, false, true));
         swimmerList.add(new Swimmer(1600, 18, "Louise", "butterfly", true, true, true));
         swimmerList.add(new CompetitiveSwimmer(1600, 20, "Peter", "Crawl", true, true, true, 55, 22));
-        swimmerList.add(new CompetitiveSwimmer(1600, 24, "Sine", "butterfly", true, true, true, 120, 15));
+
 
         scan = new Scanner(System.in);
 
@@ -32,7 +32,6 @@ public class Main {
                     if (input == 1) {
                         input = 0;
 
-
                     }
 
                     if (input == 2) {
@@ -42,12 +41,6 @@ public class Main {
 
                     if (input == 3) {
                         input = 0;
-
-                        for(Swimmer s: swimmerList)
-                        {
-                            System.out.println(s);
-                        }
-
 
                     }
 
@@ -87,7 +80,8 @@ public class Main {
                        trainerMenu = false;
                    }
 
-                   if (input > 3) {
+                   if (input > 3)
+                   {
                        input = 0;
                        System.out.println("You need to choose a menu-point from 1 - 4");
                        System.out.println();
