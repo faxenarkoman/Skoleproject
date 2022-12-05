@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Swimmer
 {
     int contingent;
@@ -8,6 +6,13 @@ public class Swimmer
     String formOfActivity;
 
     // find en metode til at implementer til hvert objekt
+
+
+    public boolean isStatus()
+    {
+        return status;
+    }
+
     boolean status;
 
     boolean ageGroup;
@@ -17,7 +22,7 @@ public class Swimmer
 
     public Swimmer(int contingent, int age, String name, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
     {
-        System.out.println("Give information of Swimmers: int membership, int age, String name, String formOfActivity, boolean status = true, boolean junior = true, boolean exerciser = true");
+        //System.out.println("Give information of Swimmers: int membership, int age, String name, String formOfActivity, boolean status = true, boolean junior = true, boolean exerciser = true");
         //scanner
         this.contingent = contingent;
         this.age  = age;
@@ -26,34 +31,13 @@ public class Swimmer
         this.status = status;
         this.ageGroup = ageGroup;
         this.traningLevel = trainingLevel;
+
+
     }
 
 
-
-    public String swimmerInfo()
+    public String toString()
     {
-        String text = "";
-        
-        if (status = false)
-            return "im a passive swimmer";
-
-        if (status = true)
-                return "im a aktive swimmer";
-
-        if (ageGroup = false)
-            return "im junior";
-
-        if (ageGroup = true)
-
-            return "im a senior";
-
-        if (traningLevel = false)
-            return "im a exerciser";
-
-        if (traningLevel = true)
-            return ("im a competitive swimmer");
-
-        return text + status + ageGroup + traningLevel;
+        return "Swimmer: " + contingent +", "+ age +", "+ name + ", " + formOfActivity;
     }
-
 }
