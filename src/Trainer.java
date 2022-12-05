@@ -11,16 +11,14 @@ public class Trainer
 
 
     private Object dateTimeFormatter;
-    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy-mm:ss");
     public static void trainer()
     {
-        System.out.println("Write the swimmers time like this: dd/MM/yyyy-mm:ss");
-        String bestTime = "19/12/2021-23:59";
+        System.out.println("Write the swimmers time like this: dd/MM/yyyy-hh:mm:ss");
+        String bestTime = "19/12/2021-13:23:59";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy-hh:mm:ss");
         bestTime = scanner.nextLine();
-        LocalDateTime date = LocalDateTime.parse(bestTime);
-        LocalDate.from(DateTimeFormatter.ISO_LOCAL_DATE.parse(bestTime));
-        DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
-        System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT));
+        LocalDateTime date = LocalDateTime.parse(bestTime,dtf);
+        System.out.println(dtf);
 
     }
 }
