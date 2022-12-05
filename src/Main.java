@@ -80,7 +80,8 @@ public class Main {
                        trainerMenu = false;
                    }
 
-                   if (input > 3 {
+                   if (input > 3)
+                   {
                        input = 0;
                        System.out.println("You need to choose a menu-point from 1 - 4");
                        System.out.println();
