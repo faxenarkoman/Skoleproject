@@ -17,18 +17,8 @@ public class Main {
         swimmerList.add(new Swimmer(1000, 16, "Patric", "breaststroke", true, false, true));
         swimmerList.add(new Swimmer(1600, 18, "Louise", "butterfly", true, true, true));
         swimmerList.add(new CompetitiveSwimmer(1600, 20, "Peter", "Crawl", true, true, true, 55, 22));
+        
 
-        for(Swimmer s: swimmerList)
-        {
-            System.out.println(s.toString());
-            if (s.isStatus())
-            {
-                System.out.println("im a active swimmer!");
-            } else
-            {
-                System.out.println("im a passive swimmer");
-            }
-        }
 
 
 
@@ -166,6 +156,18 @@ public class Main {
                    if (input == 3)
                    {
                       input = 0;
+
+                       for(Swimmer s: swimmerList)
+                       {
+                           System.out.println(s.toString());
+                           if (s.isStatus())
+                           {
+                               System.out.println("im a active swimmer!");
+                           } else
+                           {
+                               System.out.println("im a passive swimmer");
+                           }
+                       }
                    }
 
                    if (input == 4)
