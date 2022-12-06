@@ -8,13 +8,13 @@ public class Main {
 
 
         ArrayList<Swimmer> swimmerList = new ArrayList<>();
-        swimmerList.add(new Swimmer("Patric", 16, 1000, "breaststroke", true, false, true));
-        swimmerList.add(new Swimmer("Louise", 18, 1600, "butterfly", true, true, true));
-        swimmerList.add(new CompetitiveSwimmer("Peter", 20, 1600, "Crawl", true, true, true, 55, 22));
-        swimmerList.add(new Swimmer("Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
-        swimmerList.add(new Swimmer("Ahmed", 45, 500, "Chilling in the jacuzzi", false, false, false));
-        swimmerList.add(new CompetitiveSwimmer("Jens", 18, 1600, "Crawl", true, true, true, 51, 24));
-        swimmerList.add(new CompetitiveSwimmer("Martin", 19, 1600, "butterfly", true, true, true, 56, 23));
+        swimmerList.add(new Swimmer(0,"Patric", 16, 1000, "breaststroke", true, false, true));
+        swimmerList.add(new Swimmer(1,"Louise", 18, 1600, "butterfly", true, true, true));
+        swimmerList.add(new CompetitiveSwimmer(2,"Peter", 20, 1600, "Crawl", true, true, true, 55, 22));
+        swimmerList.add(new Swimmer(3,"Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
+        swimmerList.add(new Swimmer(4,"Ahmed", 45, 500, "Chilling in the jacuzzi", false, false, false));
+        swimmerList.add(new CompetitiveSwimmer(5,"Jens", 18, 1600, "Crawl", true, true, true, 51, 24));
+        swimmerList.add(new CompetitiveSwimmer(6,"Martin", 19, 1600, "butterfly", true, true, true, 56, 23));
 
 
 
@@ -50,15 +50,17 @@ public class Main {
                         boolean ageGroup = scan.nextBoolean();
                         System.out.println("Write false if swimmer is exerciser and true if competitive swimmer");
                         boolean trainingLevel = scan.nextBoolean();
+
                         double bestSwimmingResults = 0.0;
                         int date = 1;
+                        int id = 0;
                         if(trainingLevel == true)
                         {
-                            swimmerList.add(new CompetitiveSwimmer( name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
+                            swimmerList.add(new CompetitiveSwimmer(id, name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
                         }
                         else if (trainingLevel == false)
                         {
-                            swimmerList.add(new Swimmer(name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel));
+                            swimmerList.add(new Swimmer(id, name, age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel));
                         }
                     }
 
@@ -162,6 +164,9 @@ public class Main {
                         String name = scan.next();
                         System.out.println("What is the new contingent");
                         int contingent = scan.nextInt();
+                        //loop genne liste og find svømmer (name)
+                        //set ny contingent for peter
+                        //for()
                     }
 
 

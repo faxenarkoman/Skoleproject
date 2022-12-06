@@ -1,5 +1,6 @@
 public class Swimmer
 {
+    int id;
     int contingent;
     int age;
     String name;
@@ -30,10 +31,11 @@ public class Swimmer
     boolean traningLevel;
 
 
-    public Swimmer(String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
+    public Swimmer(int id, String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
     {
         //System.out.println("Give information of Swimmers: int membership, int age, String name, String formOfActivity, boolean status = true, boolean junior = true, boolean exerciser = true");
         //scanner
+        this.id = id;
         this.name = name;
         this.age  = age;
         this.contingent = contingent;
@@ -48,6 +50,6 @@ public class Swimmer
 
     public String toString()
     {
-        return "Swimmer: " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
+        return "Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
     }
 }
