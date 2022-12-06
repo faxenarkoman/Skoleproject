@@ -52,11 +52,11 @@ public class Main {
                         boolean trainingLevel = scan.nextBoolean();
                         double bestSwimmingResults = 0.0;
                         int date = 1;
-                        if(trainingLevel = true)
+                        if(trainingLevel == true)
                         {
                             swimmerList.add(new CompetitiveSwimmer( name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
                         }
-                        else if (trainingLevel = false)
+                        else if (trainingLevel == false)
                         {
                             swimmerList.add(new Swimmer(name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel));
                         }
