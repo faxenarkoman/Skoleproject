@@ -14,10 +14,10 @@ public class Main {
 
 
         ArrayList<Swimmer> swimmerList = new ArrayList<>();
-        swimmerList.add(new Swimmer(1000, 16, "Patric", "breaststroke", true, false, true));
-        swimmerList.add(new Swimmer(1600, 18, "Louise", "butterfly", true, true, true));
-        swimmerList.add(new CompetitiveSwimmer(1600, 20, "Peter", "Crawl", true, true, true, 55, 22));
-        
+        swimmerList.add(new Swimmer("Patric", 16, 1000, "breaststroke", true, false, true));
+        swimmerList.add(new Swimmer("Louise", 18, 1600, "butterfly", true, true, true));
+        swimmerList.add(new CompetitiveSwimmer("Peter", 20, 1600, "Crawl", true, true, true, 55, 22));
+        swimmerList.add(new Swimmer("Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
 
 
 
@@ -162,10 +162,25 @@ public class Main {
                            System.out.println(s.toString());
                            if (s.isStatus())
                            {
-                               System.out.println("im a active swimmer!");
+                               System.out.println("    *im a active swimmer!");
                            } else
                            {
-                               System.out.println("im a passive swimmer");
+                               System.out.println("    *im a passive swimmer");
+                           }
+                           if (s.isAgeGroup())
+                           {
+                               System.out.println("    *im a junior");
+                           } else
+                           {
+                               System.out.println("    *im a senior");
+                           }
+                           if (s.isTraningLevel())
+                           {
+                               System.out.println("    *im a competitive Swimmer");
+                           }
+                           else
+                           {
+                               System.out.println("    *im a exerciser");
                            }
                        }
                    }

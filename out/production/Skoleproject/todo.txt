@@ -7,6 +7,7 @@
 - Dicipliner træneren er tilknyttet
 - top 5 bedste tider
 - Log ny personlig bedste tid
+- Tilføje medlemer ved scanner
 
 - Liste over svømmere
 - //Integrer aktivt eller passivt medlemskab, junior eller senior svømmer, motionist eller konkurrencesvømmer
