@@ -48,6 +48,6 @@ public class Swimmer
 
     public String toString()
     {
-        return "Swimmer: " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", My form of Activity is: " + formOfActivity;
+        return "Swimmer: " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
     }
 }
