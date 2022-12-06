@@ -1,7 +1,5 @@
 import java.util.*;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
+
 
 
 
@@ -43,7 +41,30 @@ public class Main {
 
                     if (input == 1) {
                         input = 0;
-
+                        System.out.println("Insert name");
+                        String name = scan.next();
+                        System.out.println("Insert Age");
+                        int age = scan.nextInt();
+                        System.out.println("Insert contingent");
+                        int contingent = scan.nextInt();
+                        System.out.println("Insert form of activity");
+                        String formOfActivity = scan.next();
+                        System.out.println("Insert false if passive swimmer, or true if active swimmer");
+                        boolean status = scan.nextBoolean();
+                        System.out.println("Write false if swimmer is a junior swimmer, or true if senior swimmer");
+                        boolean ageGroup = scan.nextBoolean();
+                        System.out.println("Write false if swimmer is exerciser and true if competitive swimmer");
+                        boolean trainingLevel = scan.nextBoolean();
+                        double bestSwimmingResults = 0.0;
+                        int date = 1;
+                        if(trainingLevel = true)
+                        {
+                            swimmerList.add(new CompetitiveSwimmer( name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
+                        }
+                        else
+                        {
+                            swimmerList.add(new Swimmer("Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
+                        }
                     }
 
                     if (input == 2) {
@@ -81,7 +102,7 @@ public class Main {
 
                    if (input == 1) {
                        input = 0;
-                       Trainer.trainer();
+                       //Trainer.trainer();
                    }
 
                    if (input == 2) {
@@ -238,5 +259,6 @@ public class Main {
             System.out.println("(5. ---Close Program---)");
             input = scan.nextInt();
         }
+
 
 }

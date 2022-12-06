@@ -6,19 +6,15 @@ import java.util.Scanner;
 
 public class Trainer
 {
+    double bestTime = 0.0;
     static String placeHolder = "";
     static Scanner scanner = new Scanner(System.in);
 
 
     private Object dateTimeFormatter;
-    public static void trainer()
+    public void trainer()
     {
-        System.out.println("Write the swimmers time like this: dd/MM/yyyy-hh:mm:ss");
-        String bestTime = "19/12/2021-13:23:59";
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy-hh:mm:ss");
-        bestTime = scanner.nextLine();
-        LocalDateTime date = LocalDateTime.parse(bestTime,dtf);
-        System.out.println(dtf);
+        bestTime = scanner.nextDouble();
 
     }
 }
