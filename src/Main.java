@@ -18,6 +18,9 @@ public class Main {
         swimmerList.add(new Swimmer("Louise", 18, 1600, "butterfly", true, true, true));
         swimmerList.add(new CompetitiveSwimmer("Peter", 20, 1600, "Crawl", true, true, true, 55, 22));
         swimmerList.add(new Swimmer("Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
+        swimmerList.add(new Swimmer("Ahmed", 45, 500, "Chilling in the jacuzzi", false, false, false));
+        swimmerList.add(new CompetitiveSwimmer("Jens", 18, 1600, "Crawl", true, true, true, 51, 24));
+        swimmerList.add(new CompetitiveSwimmer("Martin", 19, 1600, "butterfly", true, true, true, 56, 23));
 
 
 
