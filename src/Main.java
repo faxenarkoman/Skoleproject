@@ -34,9 +34,8 @@ public class Main {
                 while(chairmanMenu) {
                     System.out.println("Hello Chairman, how do you want to proceed?");
                     System.out.println("1: Log new member");
-                    System.out.println("2: Delete current member");
-                    System.out.println("3: See all members");
-                    System.out.println("4: Back to menu");
+                    System.out.println("2: See all members");
+                    System.out.println("3: Back to menu");
                     input = scan.nextInt();
 
                     if (input == 1) {
@@ -63,23 +62,42 @@ public class Main {
                         }
                         else
                         {
-                            swimmerList.add(new Swimmer("Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
+                            swimmerList.add(new Swimmer(name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel));
                         }
                     }
 
+
                     if (input == 2) {
                         input = 0;
-
+                        for(Swimmer s: swimmerList)                                                  
+                        {                                                                            
+                            System.out.println(s.toString());                                        
+                            if (s.isStatus())                                                        
+                            {                                                                        
+                                System.out.println( "    " +   s.name + " is a active swimmer!");    
+                            } else                                                                   
+                            {                                                                        
+                                System.out.println( "    " +   s.name+ " is a passive swimmer");     
+                            }                                                                        
+                            if (s.isAgeGroup())                                                      
+                            {                                                                        
+                                System.out.println( "    "  +  s.name + " is a Junior");             
+                            } else                                                                   
+                            {                                                                        
+                                System.out.println( "    " +  s.name +  " is a senior");             
+                            }                                                                        
+                            if (s.isTraningLevel())                                                  
+                            {                                                                        
+                                System.out.println( "    "  +  s.name + " is a competitive Swimmer");
+                            }                                                                        
+                            else                                                                     
+                            {                                                                        
+                                System.out.println( "    "  +  s.name + " is a exerciser");          
+                            }                                                                        
+                        }                                                                            
                     }
 
                     if (input == 3) {
-                        input = 0;
-
-
-
-                    }
-
-                    if (input == 4) {
                         input = 0;
                         chairmanMenu = false;
                     }
