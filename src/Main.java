@@ -1,8 +1,4 @@
 import java.util.*;
-
-
-
-
 public class Main {
     static int input = 0;
     static Scanner scan;
@@ -60,7 +56,7 @@ public class Main {
                         {
                             swimmerList.add(new CompetitiveSwimmer( name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
                         }
-                        else
+                        else if (trainingLevel = false)
                         {
                             swimmerList.add(new Swimmer(name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel));
                         }
@@ -148,14 +144,29 @@ public class Main {
                 {
                     System.out.println("Welcome Cashier");
                     System.out.println("1: Show arrears");
-                    System.out.println("2: Back to main manu");
+                    System.out.println("2: Change arrears");
+                    System.out.println("3: Back to main manu");
                     input = scan.nextInt();
 
                     if (input == 1)
                     {
-                        //method here
+                        for(Swimmer s: swimmerList)
+                        {
+                            System.out.println(s.name + " owes = " +  s.contingent);
+                        }
+
                     }
                     if (input == 2)
+                    {
+                        System.out.println("What name do you want to override contingent");
+                        String name = scan.next();
+                        System.out.println("What is the new contingent");
+                        int contingent = scan.nextInt();
+                    }
+
+
+
+                    if (input == 3)
                     {
                         input = 0;
                         cashiermenu = false;
@@ -169,112 +180,27 @@ public class Main {
 
 
            }
-           if (input == 4)
-           {
-               boolean adminmenu = true;
-               while (adminmenu) {
-
-
-                   System.out.println("Whats your command, commander");
-                   System.out.println("1: Log new member");
-                   System.out.println("2: Delete current member");
-                   System.out.println("3: See all members");
-                   System.out.println("4: Trainers Calendar");
-                   System.out.println("5: Log swimmers best time");
-                   System.out.println("6: Top 5 list");
-                   System.out.println("7: Back to menu");
-                   input = scan.nextInt();
-
-                   if (input == 1)
-                   {
-                      input = 0;
-                   }
-
-                   if (input == 2)
-                   {
-                      input = 0;
-                   }
-
-                   if (input == 3)
-                   {
-                      input = 0;
-
-                       for(Swimmer s: swimmerList)
-                       {
-                           System.out.println(s.toString());
-                           if (s.isStatus())
-                           {
-                               System.out.println( "    " +   s.name + " is a active swimmer!");
-                           } else
-                           {
-                               System.out.println( "    " +   s.name+ " is a passive swimmer");
-                           }
-                           if (s.isAgeGroup())
-                           {
-                               System.out.println( "    "  +  s.name + " is a Junior");
-                           } else
-                           {
-                               System.out.println( "    " +  s.name +  " is a senior");
-                           }
-                           if (s.isTraningLevel())
-                           {
-                               System.out.println( "    "  +  s.name + " is a competitive Swimmer");
-                           }
-                           else
-                           {
-                               System.out.println( "    "  +  s.name + " is a exerciser");
-                           }
-                       }
-                   }
-
-                   if (input == 4)
-                   {
-                        input = 0;
-                   }
-
-                   if (input == 5)
-                   {
-                      input = 0;
-                   }
-
-                   if (input == 6)
-                   {
-                      input = 0;
-                   }
-
-                   if (input == 7)
-                   {
-                       input = 0;
-                       adminmenu = false;
-                   }
-
-                   if (input > 7)
-                   {
-                      System.out.println("You need to choose a menu-point from 1 - 7");
-                      System.out.println();
-                   }
-               }
-
-           }
-            if (input == 5)
+            if (input == 4)
             {
                 System.out.println("Have nice day!");
                 System.out.println("Goodbye");
                 System.exit(0);
-                }
+            }
 
-
-
+            if (input > 5)
+            {
+                System.out.println("You need to choose a menu-point from 1 - 5, try again");
+                System.out.println("");
+            }
         }
     }
         private static void mainmenu()
         {
-            System.out.println("mainmenu to Delfinen Choose your account");
+            System.out.println("Welcome to Delfinen Choose your account");
             System.out.println("(1. ---Chairman---)");
             System.out.println("(2. ---Trainer---)");
             System.out.println("(3. ---Cashier---)");
-            System.out.println("(4. ---Admin---)");
-            System.out.println("(5. ---Close Program---)");
+            System.out.println("(4. ---Close Program---)");
             input = scan.nextInt();
         }
 
