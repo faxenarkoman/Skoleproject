@@ -162,25 +162,25 @@ public class Main {
                            System.out.println(s.toString());
                            if (s.isStatus())
                            {
-                               System.out.println("    *im a active swimmer!");
+                               System.out.println( "    " +   s.name + " is a active swimmer!");
                            } else
                            {
-                               System.out.println("    *im a passive swimmer");
+                               System.out.println( "    " +   s.name+ " is a passive swimmer");
                            }
                            if (s.isAgeGroup())
                            {
-                               System.out.println("    *im a junior");
+                               System.out.println( "    "  +  s.name + " is a Junior");
                            } else
                            {
-                               System.out.println("    *im a senior");
+                               System.out.println( "    " +  s.name +  " is a senior");
                            }
                            if (s.isTraningLevel())
                            {
-                               System.out.println("    *im a competitive Swimmer");
+                               System.out.println( "    "  +  s.name + " is a competitive Swimmer");
                            }
                            else
                            {
-                               System.out.println("    *im a exerciser");
+                               System.out.println( "    "  +  s.name + " is a exerciser");
                            }
                        }
                    }
