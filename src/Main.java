@@ -124,7 +124,7 @@ public class Main {
                             swimmerList.get(i).id = scan.nextInt();
                             System.out.println("You Chose " + swimmerList.get(i).name);
                             System.out.println("What is the new personal record");
-                            doubleinput = scan.nextDouble();
+                            double doubleinput = scan.nextDouble();
                             trainerMenu = false;
                         }
 
