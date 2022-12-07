@@ -64,6 +64,7 @@ public class Main {
                         if (trainingLevel == true) {
                             swimmerList.add(new CompetitiveSwimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel, bestSwimmingResults, date));
                             count++;
+                            id++;
                         } else if (trainingLevel == false) {
                             swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel));
                             count++;
