@@ -2,7 +2,7 @@ import java.util.*;
 public class Main {
     static int input = 0;
     static Scanner scan;
-
+    double bestSwimmingResults;
     static int count;
 
     public static void main(String[] args) {
@@ -48,11 +48,11 @@ public class Main {
                         int contingent = scan.nextInt();
                         System.out.println("Insert form of activity");
                         String formOfActivity = scan.next();
-                        System.out.println("Insert false if passive swimmer, or true if active swimmer");
+                        System.out.println("False = passive swimmer / True = swimmer");
                         boolean status = scan.nextBoolean();
-                        System.out.println("Write false if swimmer is a junior swimmer, or true if senior swimmer");
+                        System.out.println("False = junior swimmer / True = senior swimmer");
                         boolean ageGroup = scan.nextBoolean();
-                        System.out.println("Write false if swimmer is exerciser and true if competitive swimmer");
+                        System.out.println("False = exerciser / True = competitive swimmer");
                         boolean trainingLevel = scan.nextBoolean();
 
                         double bestSwimmingResults = 0.0;
@@ -68,6 +68,7 @@ public class Main {
                         } else if (trainingLevel == false) {
                             swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel));
                             count++;
+                            id++;
                         }
                     }
 
@@ -126,6 +127,7 @@ public class Main {
                             System.out.println("You Chose " + swimmerList.get(i).name);
                             System.out.println("What is the new personal record");
                             double doubleinput = scan.nextDouble();
+                            //swimmerList.get(i).bestSwimmingResults = doubleinput;
                             trainerMenu = false;
                         }
 
