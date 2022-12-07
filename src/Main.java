@@ -3,6 +3,7 @@ public class Main {
     static int input = 0;
     static Scanner scan;
 
+    static int count;
 
     public static void main(String[] args) {
 
@@ -16,6 +17,13 @@ public class Main {
         swimmerList.add(new CompetitiveSwimmer(5,"Jens", 18, 1600, "Crawl", true, true, true, 51, 24));
         swimmerList.add(new CompetitiveSwimmer(6,"Martin", 19, 1600, "butterfly", true, true, true, 56, 23));
 
+
+
+            for(int i =0; i <= swimmerList.size(); i++)
+            {
+               count++;
+
+            }
 
 
 
@@ -57,10 +65,12 @@ public class Main {
                         if(trainingLevel == true)
                         {
                             swimmerList.add(new CompetitiveSwimmer(id, name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
+                            count++;
                         }
                         else if (trainingLevel == false)
                         {
                             swimmerList.add(new Swimmer(id, name, age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel));
+                            count++;
                         }
                     }
 
@@ -123,6 +133,8 @@ public class Main {
 
                    if (input == 2) {
                        input = 0;
+
+
 
                    }
 

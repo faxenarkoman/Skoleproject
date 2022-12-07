@@ -9,6 +9,9 @@ public class Swimmer
     // find en metode til at implementer til hvert objekt
 
 
+
+
+
     public boolean isStatus()
     {
         return status;
@@ -29,6 +32,10 @@ public class Swimmer
     boolean ageGroup;
 
     boolean traningLevel;
+
+
+
+
 
 
     public Swimmer(int id, String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
