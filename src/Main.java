@@ -22,7 +22,6 @@ public class Main {
             for(int i =0; i <= swimmerList.size(); i++)
             {
                count++;
-
             }
 
 
@@ -61,11 +60,10 @@ public class Main {
 
                         double bestSwimmingResults = 0.0;
                         int date = 1;
-<<<<<<< Updated upstream
-                        int id = 0;
-=======
 
->>>>>>> Stashed changes
+                        int id = 0;
+
+
                         if(trainingLevel == true)
                         {
                             swimmerList.add(new CompetitiveSwimmer(id, name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
@@ -180,6 +178,11 @@ public class Main {
                         String name = scan.next();
                         System.out.println("What is the new contingent");
                         int contingent = scan.nextInt();
+
+                        for(Swimmer s: swimmerList)
+                        {
+                            System.out.println(s.name);
+                        }
                         //loop genne liste og find svømmer (name)
                         //set ny contingent for peter
                         //for()

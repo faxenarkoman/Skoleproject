@@ -10,14 +10,7 @@ public class Swimmer
     // find en metode til at implementer til hvert objekt
 
 
-<<<<<<< Updated upstream
-
-
-
     public boolean isStatus()
-=======
-    public boolean isStatus
->>>>>>> Stashed changes
     {
         return status;
     }
@@ -27,7 +20,7 @@ public class Swimmer
         return ageGroup;
     }
 
-    public boolean isTrainingLevel()
+    public boolean isTraningLevel()
     {
         return traningLevel;
     }
