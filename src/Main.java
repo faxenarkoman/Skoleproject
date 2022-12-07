@@ -61,7 +61,11 @@ public class Main {
 
                         double bestSwimmingResults = 0.0;
                         int date = 1;
+<<<<<<< Updated upstream
                         int id = 0;
+=======
+
+>>>>>>> Stashed changes
                         if(trainingLevel == true)
                         {
                             swimmerList.add(new CompetitiveSwimmer(id, name,  age,  contingent,  formOfActivity,  status,  ageGroup,  trainingLevel,  bestSwimmingResults,  date));
