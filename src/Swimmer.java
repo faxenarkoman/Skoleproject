@@ -10,7 +10,14 @@ public class Swimmer
     // find en metode til at implementer til hvert objekt
 
 
+
+
+
+
     public boolean isStatus()
+
+    public boolean isStatus
+
     {
         return status;
     }
@@ -20,7 +27,7 @@ public class Swimmer
         return ageGroup;
     }
 
-    public boolean isTraningLevel()
+    public boolean isTrainingLevel()
     {
         return traningLevel;
     }
