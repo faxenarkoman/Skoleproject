@@ -15,7 +15,14 @@ public class Swimmer
     }
 
 
+
+
+
+
     public boolean isStatus()
+
+    public boolean isStatus
+
     {
         return status;
     }
@@ -25,7 +32,7 @@ public class Swimmer
         return ageGroup;
     }
 
-    public boolean isTraningLevel()
+    public boolean isTrainingLevel()
     {
         return traningLevel;
     }
