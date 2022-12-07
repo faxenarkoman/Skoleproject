@@ -18,9 +18,9 @@ public class Main {
         swimmerList.add(new CompetitiveSwimmer(6, "Martin", 19, 1600, "butterfly", true, true, true, 56, 23));
 
 
-        for (int i = 0; i <= swimmerList.size(); i++) {
+        for (int i = 0; i <= swimmerList.size(); i++)
+        {
             count++;
-
         }
 
 

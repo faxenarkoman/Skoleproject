@@ -9,6 +9,11 @@ public class Swimmer
 
     // find en metode til at implementer til hvert objekt
 
+    public int getId()
+    {
+        return id;
+    }
+
 
     public boolean isStatus()
     {
