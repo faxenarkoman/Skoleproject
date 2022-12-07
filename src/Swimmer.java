@@ -1,6 +1,7 @@
 public class Swimmer
 {
-    int id;
+    public int id;
+
     int contingent;
     int age;
     String name;
@@ -19,7 +20,7 @@ public class Swimmer
         return ageGroup;
     }
 
-    public boolean isTraningLevel()
+    public boolean isTrainingLevel()
     {
         return traningLevel;
     }
