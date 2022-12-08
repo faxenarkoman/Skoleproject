@@ -5,7 +5,6 @@ public class Swimmer
     }
 
     private int id;
-
     int contingent;
     int age;
 
@@ -47,6 +46,19 @@ public class Swimmer
 
     boolean traningLevel;
 
+    public Swimmer()
+    {
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,5 +85,6 @@ public class Swimmer
     {
         return "Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
     }
+
 
 }

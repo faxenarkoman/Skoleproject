@@ -1,7 +1,7 @@
 public class CompetitiveSwimmer extends Swimmer
 {
     public double getBestSwimmingResults() {
-        return bestSwimmingResults;
+        return this.bestSwimmingResults;
     }
 
     public void setBestSwimmingResults(double bestSwimmingResults) {
@@ -26,6 +26,7 @@ public class CompetitiveSwimmer extends Swimmer
 
     public CompetitiveSwimmer()
     {
+        super();
 
     }
 

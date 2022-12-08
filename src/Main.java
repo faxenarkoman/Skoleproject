@@ -2,24 +2,22 @@ import java.util.*;
 public class Main {
     static int input = 0;
     static Scanner scan;
-    double bestSwimmingResults;
     static int count;
 
     public static void main(String[] args)
     {
-
-
+       
+        CompetitiveSwimmer cp = new CompetitiveSwimmer(2, "Peter", 20, 1600, "Crawl", true, true, true, 55.1);
         ArrayList<Swimmer> swimmerList = new ArrayList<>();
         swimmerList.add(new Swimmer(0, "Patric", 16, 1000, "breaststroke", true, false, true));
         swimmerList.add(new Swimmer(1, "Louise", 18, 1600, "butterfly", true, true, true));
-        swimmerList.add(new CompetitiveSwimmer(2, "Peter", 20, 1600, "Crawl", true, true, true, 55));
+        swimmerList.add(new CompetitiveSwimmer(2, "Peter", 20, 1600, "Crawl", true, true, true, 55.1));
         swimmerList.add(new Swimmer(3, "Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
         swimmerList.add(new Swimmer(4, "Ahmed", 45, 500, "Chilling in the jacuzzi", false, false, false));
-        swimmerList.add(new CompetitiveSwimmer(5, "Jens", 18, 1600, "Crawl", true, true, true, 51));
-        swimmerList.add(new CompetitiveSwimmer(6, "Martin", 19, 1600, "butterfly", true, true, true, 56));
-        swimmerList.add(new CompetitiveSwimmer(7, "Borat", 19, 1600, "butterfly", true, true, true, 56));
-        swimmerList.add(new CompetitiveSwimmer(8, "Karl", 19, 1600, "butterfly", true, true, true, 56));
-
+        swimmerList.add(new CompetitiveSwimmer(5, "Jens", 18, 1600, "Crawl", true, true, true, 51.5));
+        swimmerList.add(new CompetitiveSwimmer(6, "Martin", 19, 1600, "butterfly", true, true, true, 56.6));
+        swimmerList.add(new CompetitiveSwimmer(7, "Borat", 19, 1600, "butterfly", true, true, true, 56.7));
+        swimmerList.add(new CompetitiveSwimmer(8, "Karl", 19, 1600, "butterfly", true, true, true, 20.1));
 
         for (int i = 0; i <= swimmerList.size(); i++)
         {
@@ -139,7 +137,8 @@ public class Main {
 
                     if (input == 1) {
                         input = 0;
-                        for (int i = 0; i < swimmerList.size(); i++) {
+                        for (int i = 0; i < swimmerList.size(); i++)
+                        {
 
                             System.out.println("What is the ID of the person which you want to log new best time");
                             int j = scan.nextInt();
@@ -149,16 +148,18 @@ public class Main {
                             double doubleinput = scan.nextDouble();
                             swimmer.setBestSwimmingResults(doubleinput);
                             System.out.println(swimmer.getName() + "(s) best time is: " + swimmer.getBestSwimmingResults());
-                            trainerMenu = false;
                         }
                     }
 
-                    if (input == 2) {
+                    if (input == 2)
+                    {
                         input = 0;
-                        CompetitiveSwimmer cp = new CompetitiveSwimmer();
-                        swimmerList.sort(Comparator.comparing(Swimmer->CompetitiveSwimmer.getBestSwimmingResults())
-
-
+                        //CompetitiveSwimmer cp = new CompetitiveSwimmer();
+                        for (int i = 0; i < swimmerList.size(); i++)
+                        {
+                            swimmerList.sort(Comparator.comparing(Swimmer -> cp.getBestSwimmingResults()));
+                            System.out.println(cp.getName() + " " + cp.getBestSwimmingResults());
+                        }
 
                     }
 
