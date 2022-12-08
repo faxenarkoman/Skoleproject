@@ -197,6 +197,24 @@ public class Main {
                         String name = scan.next();
                         System.out.println("What is the new contingent");
                         int contingent = scan.nextInt();
+
+                        Swimmer searchResult = null;
+                        for (Swimmer s : swimmerList) {
+                            if (s.getName().equals(name)) {
+                                searchResult = s;
+                                break;
+                            }
+                        }
+
+                        if (searchResult == null)
+                        {
+                            System.out.println("Navnet findes ikke");
+                        } else
+                        {
+                            searchResult.contingent = contingent;
+                        }
+
+
                         //loop genne liste og find svømmer (name)
                         //set ny contingent for peter
                         //for()
