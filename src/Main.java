@@ -159,6 +159,7 @@ public class Main {
                         {
                             swimmerList.sort(Comparator.comparing(Swimmer -> cp.getBestSwimmingResults()));
                             System.out.println(cp.getName() + " " + cp.getBestSwimmingResults());
+                            System.out.println("");
                         }
 
                     }
