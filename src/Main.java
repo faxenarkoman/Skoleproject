@@ -2,7 +2,7 @@ import java.util.*;
 public class Main {
     static int input = 0;
     static Scanner scan;
-    double bestSwimmingResults;
+
     static int count;
 
     public static void main(String[] args) {
@@ -18,8 +18,14 @@ public class Main {
         swimmerList.add(new CompetitiveSwimmer(6, "Martin", 19, 1600, "butterfly", true, true, true, 56, 23));
 
 
+
         for (int i = 0; i <= swimmerList.size(); i++) {
             count++;
+
+       // for (int i = 0; i <= swimmerList.size(); i++)
+        //{
+          //  if (id > 6; count++);
+
         }
         for (Swimmer s : swimmerList) {
             s.getId();
@@ -79,11 +85,43 @@ public class Main {
                             k.setId(id);
                         }
 
+
                     } else if (trainingLevel == false) {
                         swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel));
                         count++;
                         for (Swimmer l : swimmerList) {
                             l.setId(id);
+
+                    if (input == 1) {
+                        input = 0;
+                        System.out.println("Insert name");
+                        String name = scan.next();
+                        System.out.println("Insert Age");
+                        int age = scan.nextInt();
+                        System.out.println("Insert contingent");
+                        int contingent = scan.nextInt();
+                        System.out.println("Insert form of activity");
+                        String formOfActivity = scan.next();
+                        System.out.println("Insert false if passive swimmer, or true if active swimmer");
+                        boolean status = scan.nextBoolean();
+                        System.out.println("Write false if swimmer is a junior swimmer, or true if senior swimmer");
+                        boolean ageGroup = scan.nextBoolean();
+                        System.out.println("Write false if swimmer is exerciser and true if competitive swimmer");
+                        boolean trainingLevel = scan.nextBoolean();
+
+                        double bestSwimmingResults = 0.0;
+                        int date = 1;
+
+                        int id = 0;
+
+
+                        if (trainingLevel == true) {
+                            swimmerList.add(new CompetitiveSwimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel, bestSwimmingResults, date));
+                            count++;
+                        } else if (trainingLevel == false) {
+                            swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel));
+                            count++;
+
                         }
                     }
 
@@ -132,6 +170,7 @@ public class Main {
                         System.out.println("3: Back to menu");
                         input = scan.nextInt();
 
+
                         if (input == 1) {
                             input = 0;
                             for (int i = 0; i < swimmerList.size(); i++) {
@@ -146,6 +185,14 @@ public class Main {
                                 System.out.println(swimmer.getName() + "(s) best time is: " + swimmer.getBestSwimmingResults());
                                 trainerMenu = false;
                             }
+
+                            System.out.println("What is the ID of the person which you want to log new best time");
+                            swimmerList.get(i).id = scan.nextInt();
+                            System.out.println("You Chose " + swimmerList.get(i).name);
+                            System.out.println("What is the new personal record");
+                            double doubleinput = scan.nextDouble();
+                            trainerMenu = false;
+
                         }
 
                         if (input == 2) {
