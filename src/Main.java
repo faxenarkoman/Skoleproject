@@ -193,14 +193,14 @@ public class Main {
 
                     }
                     if (input == 2) {
-                        System.out.println("What name do you want to override contingent");
-                        String name = scan.next();
+                        System.out.println("Witch id do you want to override contingent");
+                        int id = scan.nextInt();
                         System.out.println("What is the new contingent");
                         int contingent = scan.nextInt();
 
                         Swimmer searchResult = null;
                         for (Swimmer s : swimmerList) {
-                            if (s.getName().equals(name)) {
+                            if (s.getId() == id) {
                                 searchResult = s;
                                 break;
                             }
