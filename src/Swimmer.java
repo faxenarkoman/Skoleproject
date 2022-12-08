@@ -1,9 +1,18 @@
 public class Swimmer
 {
-    public int id;
+    public void setId(int id) {
+        this.id = id++;
+    }
+
+    private int id;
 
     int contingent;
     int age;
+
+    public String getName() {
+        return name;
+    }
+
     String name;
     String formOfActivity;
 
@@ -64,4 +73,5 @@ public class Swimmer
     {
         return "Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
     }
+
 }

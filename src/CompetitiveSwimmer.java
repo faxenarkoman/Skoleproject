@@ -1,8 +1,16 @@
 public class CompetitiveSwimmer extends Swimmer
 {
-    double bestSwimmingResults;
-    int date;
+    public double getBestSwimmingResults() {
+        return bestSwimmingResults;
+    }
 
+    public void setBestSwimmingResults(double bestSwimmingResults) {
+        this.bestSwimmingResults = bestSwimmingResults;
+    }
+
+    double bestSwimmingResults = 0.0;
+    int date;
+    int id;
 
       public CompetitiveSwimmer(int id, String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel, double bestSwimmingResults, int date)
     {
