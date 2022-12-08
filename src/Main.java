@@ -214,7 +214,7 @@ public class Main {
                             searchResult.contingent = contingent;
                         }
 
-                            bla 
+                             
                         //loop genne liste og find svømmer (name)
                         //set ny contingent for peter
                         //for()

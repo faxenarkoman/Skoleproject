@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.function.ToDoubleFunction;
 
-public class CompetitiveSwimmer extends Swimmer implements Comparator<CompetitiveSwimmer>
+public class CompetitiveSwimmer extends Swimmer
 {
     public double getBestSwimmingResults() {
         return this.bestSwimmingResults;
@@ -33,11 +33,5 @@ public class CompetitiveSwimmer extends Swimmer implements Comparator<Competitiv
 
     }
 
-
-    @Override
-    public Comparator<CompetitiveSwimmer> thenComparingDouble(ToDoubleFunction<? super CompetitiveSwimmer> keyExtractor)
-    {
-        return Comparator.super.thenComparingDouble(keyExtractor);
-    }
 }
 

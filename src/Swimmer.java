@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class Swimmer implements Comparator<Swimmer>
+public class Swimmer
 {
     public void setId(int id) {
         this.id = id++;
