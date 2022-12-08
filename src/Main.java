@@ -157,9 +157,9 @@ public class Main {
                         //CompetitiveSwimmer cp = new CompetitiveSwimmer();
                         for (int i = 0; i < swimmerList.size(); i++)
                         {
-                            //swimmerList.sort(Comparator.comparing(CompetitiveSwimmer::getBestSwimmingResults()));
-                            //System.out.println(CompetitiveSwimmer.getName() + " " + cp.getBestSwimmingResults());
-                            //swimmerList.sort(Double.compare(((CompetitiveSwimmer) swimmerList.get(j)).bestSwimmingResults, )) ;
+                            swimmerList.sort(Comparator.comparing(Swimmer -> cp.getBestSwimmingResults()));
+                            System.out.println(cp.getName() + " " + cp.getBestSwimmingResults());
+                            System.out.println("");
                         }
 
                     }
@@ -214,7 +214,7 @@ public class Main {
                             searchResult.contingent = contingent;
                         }
 
-                             
+
                         //loop genne liste og find svømmer (name)
                         //set ny contingent for peter
                         //for()
