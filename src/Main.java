@@ -159,7 +159,7 @@ public class Main {
                         {
                             //swimmerList.sort(Comparator.comparing(CompetitiveSwimmer::getBestSwimmingResults()));
                             //System.out.println(CompetitiveSwimmer.getName() + " " + cp.getBestSwimmingResults());
-                            swimmerList.sort(Double.compare(((CompetitiveSwimmer) swimmerList.get(j)).bestSwimmingResults, )) ;
+                            //swimmerList.sort(Double.compare(((CompetitiveSwimmer) swimmerList.get(j)).bestSwimmingResults, )) ;
                         }
 
                     }
