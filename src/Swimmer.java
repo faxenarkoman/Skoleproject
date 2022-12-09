@@ -1,62 +1,31 @@
-import java.util.Comparator;
-
 public class Swimmer implements Comparable<Swimmer>
 {
-    private void setId(int id) {
-        total++;
-        this.id = total;
-    }
-
+    //Variables
     static int total = 0;
-    private int id;
+    int id;
     int contingent;
     int age;
-
-    public String getName() {
-        return name;
-    }
-
     String name;
     String formOfActivity;
+    boolean status;
 
-    // find en metode til at implementer til hvert objekt
+    boolean ageGroup;
 
+    boolean trainingLevel;
+
+    //Getters and Setters
+
+    public String getName()
+    {
+        return name;
+    }
     public int getId()
     {
         return id;
     }
 
-
-
-    public boolean isStatus()
-
-    {
-        return status;
-    }
-
-    public boolean isAgeGroup()
-    {
-        return ageGroup;
-    }
-
-    public boolean isTraningLevel()
-    {
-        return traningLevel;
-    }
-
-    boolean status;
-
-    boolean ageGroup;
-
-    boolean traningLevel;
-
-    public Swimmer()
-    {
-
-    }
-
-
-    public Swimmer(String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
+    //Constructor
+    public Swimmer( String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
     {
         total++;
         this.id = total;
@@ -66,10 +35,22 @@ public class Swimmer implements Comparable<Swimmer>
         this.formOfActivity = formOfActivity;
         this.status = status;
         this.ageGroup = ageGroup;
-        this.traningLevel = trainingLevel;
+        this.trainingLevel = trainingLevel;
+    }
+    //Everything else
+    public boolean isStatus()
+    {
+        return status;
     }
 
-
+    public boolean isAgeGroup()
+    {
+        return ageGroup;
+    }
+    public boolean isTrainingLevel()
+    {
+        return trainingLevel;
+    }
     public String toString()
     {
         return "\n[Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity + "]";

@@ -3,7 +3,6 @@ public class Main
 {
     static int input = 0;
     static Scanner scan;
-
     public static void main(String[] args)
     {
 
@@ -21,19 +20,23 @@ public class Main
 
         scan = new Scanner(System.in);
         boolean goReturn = true;
-        while (goReturn) {
+        while (goReturn)
+        {
             mainMenu();
-            if (input == 1) {
+            if (input == 1)
+            {
                 input = 0;
                 boolean chairmanMenu = true;
-                while (chairmanMenu) {
+                while (chairmanMenu)
+                {
                     System.out.println("Hello Chairman, how do you want to proceed?");
                     System.out.println("1: Log new member");
                     System.out.println("2: See all members");
                     System.out.println("3: Back to menu");
                     input = scan.nextInt();
 
-                    if (input == 1) {
+                    if (input == 1)
+                    {
                         input = 0;
                         boolean trainingLevel;
                         String name;
@@ -42,6 +45,7 @@ public class Main
                         String formOfActivity;
                         boolean status;
                         boolean ageGroup;
+                        double bestSwimmingResults = 0.0;
 
                         System.out.println("Insert name");
                         name = scan.next();
@@ -58,68 +62,80 @@ public class Main
                         System.out.println("False = exerciser / True = competitive swimmer");
                         trainingLevel = scan.nextBoolean();
 
-                        double bestSwimmingResults = 0.0;
-
-
-                        if (trainingLevel) {
+                        if (trainingLevel)
+                        {
                             swimmerList.add(new CompetitiveSwimmer(name, age, contingent, formOfActivity, status, ageGroup, true, bestSwimmingResults));
-                        } else {
+                        }
+                        else
+                        {
                             swimmerList.add(new Swimmer(name, age, contingent, formOfActivity, status, ageGroup, false));
                         }
 
                     }
-                    if (input == 2) {
+                    if (input == 2)
+                    {
                         input = 0;
-                        for (Swimmer s : swimmerList) {
+                        for (Swimmer s : swimmerList)
+                        {
                             System.out.println(s.toString());
-                            if (s.isStatus()) {
+                            if (s.isStatus())
+                            {
                                 System.out.println("    " + s.name + " is a active swimmer!");
-                            } else {
+                            }
+                            else
+                            {
                                 System.out.println("    " + s.name + " is a passive swimmer");
                             }
-                            if (s.isAgeGroup()) {
-                                System.out.println("    " + s.name + " is a Junior");
-                            } else {
-                                System.out.println("    " + s.name + " is a senior");
+                            if (s.isAgeGroup())
+                            {
+                                System.out.println("    " + s.name + " is a Senior");
                             }
-                            if (s.isTraningLevel()) {
-                                System.out.println("    " + s.name + " is a competitive Swimmer");
-                            } else {
+                            else
+                            {
+                                System.out.println("    " + s.name + " is a Junior");
+                            }
+                            if (s.isTrainingLevel())
+                            {
                                 System.out.println("    " + s.name + " is a exerciser");
                             }
-
 
                         }
                     }
 
-                    if (input > 4) {
+                    if (input > 4)
+                    {
                         input = 0;
                         System.out.println("You need to choose a menu-point from 1 - 3");
                         System.out.println();
                     }
 
-                    if (input == 3) {
+                    if (input == 3)
+                    {
                         input = 0;
                         chairmanMenu = false;
                     }
                 }
             }
-            if (input == 2) {
+            if (input == 2)
+            {
                 boolean trainerMenu = true;
-                while (trainerMenu) {
+                while (trainerMenu)
+                {
                     System.out.println("Trainer, how do you want to Proceed");
                     System.out.println("1: Log swimmers best time");
                     System.out.println("2: Top 5 list");
                     System.out.println("3: Back to menu");
                     input = scan.nextInt();
 
-                    if (input == 1) {
+                    if (input == 1)
+                    {
                         input = 0;
-                        for (int i = 0; i < swimmerList.size(); i++) {
+                        for (int i = 0; i < swimmerList.size(); i++)
+                        {
 
                             System.out.println("What is the ID of the person which you want to log new best time");
                             int j = scan.nextInt();
-                            CompetitiveSwimmer swimmer = (CompetitiveSwimmer) swimmerList.get(j);
+                            CompetitiveSwimmer swimmer = (CompetitiveSwimmer) swimmerList.get(j-1);
                             System.out.println("You Chose " + swimmer.getName());
                             System.out.println("What is the new personal record");
                             double doubleInput = scan.nextDouble();
@@ -127,107 +143,116 @@ public class Main
                             System.out.println(swimmer.getName() + "(s) best time is: " + swimmer.getBestSwimmingResults());
                         }
                     }
-
-                    if (input == 2) {
+                    if (input == 2)
+                    {
                         input = 0;
-                        int index = 0;
-
                         Collections.sort(swimmerList);
 
-                        if (index != 0) {
-                            System.out.println((index + 1)+ swimmerList);
-                            index++;
-                            System.out.println("--------------------------------------------------------");
-                        }
-                        else if (index == 5)
-                        {
-                            break;
-                        }
+                            int i = 0;
+                            while (i < 5)
+                            {
+                                System.out.println(swimmerList.get(i));
+                                i++;
 
-                        if (input == 3) {
-                            input = 0;
-                            trainerMenu = false;
-                        }
-
-                        if (input > 3) {
-                            input = 0;
-                            System.out.println("You need to choose a menu-point from 1 - 4");
-                            System.out.println();
-                        }
+                            }
                     }
-                }
+                    if (input == 3)
+                    {
+                        input = 0;
+                        trainerMenu = false;
+                    }
 
-                if (input == 3) {
-                    boolean cashierMenu = true;
-                    while (cashierMenu) {
-                        System.out.println("Welcome Cashier");
-                        System.out.println("1: Show arrears");
-                        System.out.println("2: Change arrears");
-                        System.out.println("3: Back to main manu");
-                        input = scan.nextInt();
-
-                        if (input == 1) {
-                            for (Swimmer s : swimmerList) {
-                                System.out.println(s.name + " owes = " + s.contingent);
-                            }
-
-                        }
-                        if (input == 2) {
-                            System.out.println("Witch id do you want to override contingent");
-                            int id = scan.nextInt();
-                            System.out.println("What is the new contingent");
-                            int contingent = scan.nextInt();
-
-                            Swimmer searchResult = null;
-                            for (Swimmer s : swimmerList) {
-                                if (s.getId() == id) {
-                                    searchResult = s;
-                                    break;
-                                }
-                            }
-
-                            if (searchResult == null) {
-                                System.out.println("Name doesn't exist");
-                            } else {
-                                searchResult.contingent = contingent;
-                            }
-
-
-                        }
-
-
-                        if (input == 3) {
-                            input = 0;
-                            cashierMenu = false;
-                        } else if (input > 2) {
-                            input = 0;
-                            System.out.println("You need to choose a menu-point from 1 - 4");
-                        }
+                    if (input > 3)
+                    {
+                        input = 0;
+                        System.out.println("You need to choose a menu-point from 1 - 4");
                         System.out.println();
                     }
-                }
-                if (input == 4) {
-                    System.out.println("Have nice day!");
-                    System.out.println("Goodbye");
-                    goReturn = false;
-                }
 
-                if (input > 5) {
-                    System.out.println("You need to choose a menu-point from 1 - 5, try again");
+                }
+            }
+            if (input == 3)
+            {
+                boolean cashierMenu = true;
+                while (cashierMenu)
+                {
+                    System.out.println("Welcome Cashier");
+                    System.out.println("1: Show arrears");
+                    System.out.println("2: Change arrears");
+                    System.out.println("3: Back to main manu");
+                    input = scan.nextInt();
+
+                    if (input == 1)
+                    {
+                        for (Swimmer s : swimmerList)
+                        {
+                            System.out.println(s.name + " owes = " + s.contingent);
+                        }
+
+                    }
+                    if (input == 2)
+                    {
+                        System.out.println("Witch id do you want to override contingent");
+                        int id = scan.nextInt();
+                        System.out.println("What is the new contingent");
+                        int contingent = scan.nextInt();
+
+                        Swimmer searchResult = null;
+                        for (Swimmer s : swimmerList)
+                        {
+                            if (s.getId() == id) {
+                                searchResult = s;
+                                break;
+                            }
+                        }
+
+                        if (searchResult == null)
+                        {
+                            System.out.println("Name doesn't exist");
+                        } else
+                        {
+                            searchResult.contingent = contingent;
+                        }
+
+                    }
+
+
+                    if (input == 3)
+                    {
+                        input = 0;
+                        cashierMenu = false;
+                    }
+                    else if (input > 2)
+                    {
+                        input = 0;
+                        System.out.println("You need to choose a menu-point from 1 - 4");
+                    }
                     System.out.println();
                 }
             }
+            if (input == 4)
+            {
+                System.out.println("Have nice day!");
+                System.out.println("Goodbye");
+                goReturn = false;
+            }
+
+            if (input > 5)
+            {
+                System.out.println("You need to choose a menu-point from 1 - 5, try again");
+                System.out.println();
+            }
+
         }
 
     }
-        private static void mainMenu ()
-        {
-            System.out.println("Welcome to Delfinen Choose your account");
-            System.out.println("(1. ---Chairman---)");
-            System.out.println("(2. ---Trainer---)");
-            System.out.println("(3. ---Cashier---)");
-            System.out.println("(4. ---Close Program---)");
-            input = scan.nextInt();
-        }
-
+    private static void mainMenu ()
+    {
+        System.out.println("Welcome to Delfinen Choose your account");
+        System.out.println("(1. ---Chairman---)");
+        System.out.println("(2. ---Trainer---)");
+        System.out.println("(3. ---Cashier---)");
+        System.out.println("(4. ---Close Program---)");
+        input = scan.nextInt();
+    }
 }
