@@ -2,10 +2,12 @@ import java.util.Comparator;
 
 public class Swimmer
 {
-    public void setId(int id) {
-        this.id = id++;
+    private void setId(int id) {
+        total++;
+        this.id = total;
     }
 
+    static int total = 0;
     private int id;
     int contingent;
     int age;
@@ -54,23 +56,10 @@ public class Swimmer
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    public Swimmer(int id, String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
+    public Swimmer(String name, int age, int contingent, String formOfActivity, boolean status, boolean ageGroup, boolean trainingLevel)
     {
-        //System.out.println("Give information of Swimmers: int membership, int age, String name, String formOfActivity, boolean status = true, boolean junior = true, boolean exerciser = true");
-        //scanner
-        this.id = id;
+        total++;
+        this.id = total;
         this.name = name;
         this.age  = age;
         this.contingent = contingent;
@@ -78,8 +67,6 @@ public class Swimmer
         this.status = status;
         this.ageGroup = ageGroup;
         this.traningLevel = trainingLevel;
-
-
     }
 
 
@@ -87,7 +74,4 @@ public class Swimmer
     {
         return "Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
     }
-
-
-
 }

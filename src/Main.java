@@ -2,31 +2,22 @@ import java.util.*;
 public class Main {
     static int input = 0;
     static Scanner scan;
-    static int count;
 
     public static void main(String[] args)
     {
        
-        CompetitiveSwimmer cp = new CompetitiveSwimmer(2, "Peter", 20, 1600, "Crawl", true, true, true, 55.1);
+        CompetitiveSwimmer cp = new CompetitiveSwimmer("Peter", 20, 1600, "Crawl", true, true, true, 55.1);
         ArrayList<Swimmer> swimmerList = new ArrayList<>();
-        swimmerList.add(new Swimmer(0, "Patric", 16, 1000, "breaststroke", true, false, true));
-        swimmerList.add(new Swimmer(1, "Louise", 18, 1600, "butterfly", true, true, true));
-        swimmerList.add(new CompetitiveSwimmer(2, "Peter", 20, 1600, "Crawl", true, true, true, 55.1));
-        swimmerList.add(new Swimmer(3, "Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
-        swimmerList.add(new Swimmer(4, "Ahmed", 45, 500, "Chilling in the jacuzzi", false, false, false));
-        swimmerList.add(new CompetitiveSwimmer(5, "Jens", 18, 1600, "Crawl", true, true, true, 51.5));
-        swimmerList.add(new CompetitiveSwimmer(6, "Martin", 19, 1600, "butterfly", true, true, true, 56.6));
-        swimmerList.add(new CompetitiveSwimmer(7, "Borat", 19, 1600, "butterfly", true, true, true, 56.7));
-        swimmerList.add(new CompetitiveSwimmer(8, "Karl", 19, 1600, "butterfly", true, true, true, 20.1));
+        swimmerList.add(new Swimmer("Patric", 16, 1000, "breaststroke", true, false, true));
+        swimmerList.add(new Swimmer("Louise", 18, 1600, "butterfly", true, true, true));
+        swimmerList.add(new CompetitiveSwimmer("Peter", 20, 1600, "Crawl", true, true, true, 55.1));
+        swimmerList.add(new Swimmer("Ole", 65, 500, "Just chilling in the kids pool", false, false, false));
+        swimmerList.add(new Swimmer("Ahmed", 45, 500, "Chilling in the jacuzzi", false, false, false));
+        swimmerList.add(new CompetitiveSwimmer("Jens", 18, 1600, "Crawl", true, true, true, 51.5));
+        swimmerList.add(new CompetitiveSwimmer("Martin", 19, 1600, "butterfly", true, true, true, 56.6));
+        swimmerList.add(new CompetitiveSwimmer("Borat", 19, 1600, "butterfly", true, true, true, 56.7));
+        swimmerList.add(new CompetitiveSwimmer("Karl", 19, 1600, "butterfly", true, true, true, 20.1));
 
-        for (int i = 0; i <= swimmerList.size(); i++)
-        {
-            count++;
-        }
-        for (Swimmer s : swimmerList)
-        {
-            //s.setId(s.getId());
-        }
 
         scan = new Scanner(System.in);
         boolean goReturn = true;
@@ -45,7 +36,6 @@ public class Main {
                     if (input == 1) {
                         input = 0;
                         boolean trainingLevel;
-                        int id;
                         String name;
                         int age;
                         int contingent;
@@ -70,24 +60,15 @@ public class Main {
 
                         double bestSwimmingResults = 0.0;
 
-                        id = 0;
 
 
                         if (trainingLevel) {
-                            swimmerList.add(new CompetitiveSwimmer(id, name, age, contingent, formOfActivity, status, ageGroup, true, bestSwimmingResults));
-                            //for (Swimmer k : swimmerList) {
-                            //    k.setId(id);
-                            //}
-
+                            swimmerList.add(new CompetitiveSwimmer(name, age, contingent, formOfActivity, status, ageGroup, true, bestSwimmingResults));
                         } 
                         else 
                         {
-                            swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, false));
-                            //for (Swimmer l : swimmerList) {
-                            //    l.setId(id);
-                           // }
+                            swimmerList.add(new Swimmer(name, age, contingent, formOfActivity, status, ageGroup, false));
                         }
-                        count++;
 
                     }
                     if (input == 2) {
@@ -215,9 +196,6 @@ public class Main {
                         }
 
 
-                        //loop genne liste og find svømmer (name)
-                        //set ny contingent for peter
-                        //for()
                     }
 
 
