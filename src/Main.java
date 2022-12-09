@@ -44,14 +44,14 @@ public class Main {
 
                     if (input == 1) {
                         input = 0;
-                        boolean trainingLevel = false;
-                        int id = 0;
-                        String name = null;
-                        int age = 0;
-                        int contingent = 0;
-                        String formOfActivity = null;
-                        boolean status = false;
-                        boolean ageGroup = false;
+                        boolean trainingLevel;
+                        int id;
+                        String name;
+                        int age;
+                        int contingent;
+                        String formOfActivity;
+                        boolean status;
+                        boolean ageGroup;
 
                         System.out.println("Insert name");
                         name = scan.next();
@@ -69,25 +69,25 @@ public class Main {
                         trainingLevel = scan.nextBoolean();
 
                         double bestSwimmingResults = 0.0;
-                        int date = 1;
 
                         id = 0;
 
 
-                        if (trainingLevel == true) {
-                            swimmerList.add(new CompetitiveSwimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel, bestSwimmingResults));
-                            count++;
+                        if (trainingLevel) {
+                            swimmerList.add(new CompetitiveSwimmer(id, name, age, contingent, formOfActivity, status, ageGroup, true, bestSwimmingResults));
                             //for (Swimmer k : swimmerList) {
                             //    k.setId(id);
                             //}
 
-                        } else if (trainingLevel == false) {
-                            swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, trainingLevel));
-                            count++;
+                        } 
+                        else 
+                        {
+                            swimmerList.add(new Swimmer(id, name, age, contingent, formOfActivity, status, ageGroup, false));
                             //for (Swimmer l : swimmerList) {
                             //    l.setId(id);
                            // }
                         }
+                        count++;
 
                     }
                     if (input == 2) {
@@ -145,8 +145,8 @@ public class Main {
                             CompetitiveSwimmer swimmer = (CompetitiveSwimmer) swimmerList.get(j);
                             System.out.println("You Chose " + swimmer.getName());
                             System.out.println("What is the new personal record");
-                            double doubleinput = scan.nextDouble();
-                            swimmer.setBestSwimmingResults(doubleinput);
+                            double doubleInput = scan.nextDouble();
+                            swimmer.setBestSwimmingResults(doubleInput);
                             System.out.println(swimmer.getName() + "(s) best time is: " + swimmer.getBestSwimmingResults());
                         }
                     }
@@ -159,7 +159,7 @@ public class Main {
                         {
                             swimmerList.sort(Comparator.comparing(Swimmer -> cp.getBestSwimmingResults()));
                             System.out.println(cp.getName() + " " + cp.getBestSwimmingResults());
-                            System.out.println("");
+                            System.out.println();
                         }
 
                     }
@@ -208,7 +208,7 @@ public class Main {
 
                         if (searchResult == null)
                         {
-                            System.out.println("Navnet findes ikke");
+                            System.out.println("Name doesn't exist");
                         } else
                         {
                             searchResult.contingent = contingent;
@@ -234,12 +234,12 @@ public class Main {
             if (input == 4) {
                 System.out.println("Have nice day!");
                 System.out.println("Goodbye");
-                System.exit(0);
+                goReturn = false;
             }
 
             if (input > 5) {
                 System.out.println("You need to choose a menu-point from 1 - 5, try again");
-                System.out.println("");
+                System.out.println();
             }
         }
     }
