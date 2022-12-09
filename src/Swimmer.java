@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class Swimmer
+public class Swimmer implements Comparable<Swimmer>
 {
     private void setId(int id) {
         total++;
@@ -72,6 +72,33 @@ public class Swimmer
 
     public String toString()
     {
-        return "Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity;
+        return "\n[Swimmer: " + id + ", " + name +", "+ age +" Years, "+ "this is the contingent: " + contingent + ", Form of Activity: " + formOfActivity + "]";
+    }
+
+    @Override
+    public int compareTo(Swimmer o)
+    {
+        if (this instanceof CompetitiveSwimmer)
+        {
+            if (o instanceof CompetitiveSwimmer)
+            {
+                if (((CompetitiveSwimmer) this).getBestSwimmingResults() < ((CompetitiveSwimmer) o).getBestSwimmingResults())
+                {
+                    return -1;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        else
+        {
+            return 1;
+        }
     }
 }

@@ -30,6 +30,10 @@ public class CompetitiveSwimmer extends Swimmer
         super();
 
     }
+    public String toString()
+    {
+        return "\n[Swimmer: " + getId() + ", " + name +", " + bestSwimmingResults + "]";
+    }
 
 }
 
